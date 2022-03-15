@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.preloader{
+			height: 100vh;
+			background-color: #0f0;
+			display: block;
+		}
+	</style>
+	<link rel="stylesheet" href="css/style.css">
+	
+</head>
+<body>
+	<div class="preloader">
+			
+	</div>
+	
+	<div class="main_wrap">	
+
+		<div class="wrap_top">
+			<button class="btn_menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+			
+		</div>
+		<div class="main_menu">
+			<div class="circle"></div>
+			<ul>
+				<li><a href="#">i1</a></li>
+				<li><a href="#">i2</a></li>
+				<li><a href="#">i3</a></li>
+				<li><a href="#">i4</a></li>
+				<li><a href="#">i5</a></li>
+			</ul>
+		</div>
+	</div>
+
+
+	<script>
+		window.onload = ()=>{
+			setTimeout(()=>{
+				document.querySelector('.preloader').style.display = 'none';
+			}, 2000);
+		}
+		let btn = document.querySelector('.btn_menu');
+		let main_wrap = document.querySelector('.main_wrap');
+		btn.addEventListener('click', ()=>{
+			main_wrap.classList.toggle('active');
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+.btn_menu{
+	border-color: transparent;
+	background-color: transparent;
+	cursor: pointer;
+	position: relative;
+	z-index: 4;
+	width: 36px;
+	height: 31px;
+}
+.btn_menu span{
+	background-color: #000;
+	height: 2px;
+	width: 20px;
+	margin: 4px 0;
+	display: block;
+	transition: 0.5s ease;
+}
+.btn_menu span:nth-child(2){
+	margin-left: -5px;
+}
+.wrap_top{
+	display: flex;
+	justify-content: flex-end;
+}
+.main_menu{
+	position: fixed;
+	width: 100%;
+	background-color: rgba(255, 0, 0, 1);
+	right: 0;
+	bottom: 0;
+	top: 0;
+	left: 0;
+	display: none;
+}
+.main_menu .circle{
+	width: 10px;
+	height: 10px;
+	margin-top: -5px;
+	margin-right: -5px;
+	background-color: #fff;
+	position: absolute;
+	right: 0;
+	border-radius: 50%;
+	transition: 5s ease;
+	transform: scale(1000);
+}
+.main_wrap.active .main_menu{
+	display: block;
+}
+.main_wrap.active .main_menu .circle{
+	background-color: #000;
+	animation: circl 5s ease;
+}
+.main_wrap.active .btn_menu span:nth-child(1){
+	transform: rotate(-45deg);
+	margin-top: 6px;
+}
+.main_wrap.active .btn_menu span:nth-child(2){
+	display: none;
+}
+.main_wrap.active .btn_menu span:nth-child(3){
+	transform: rotate(45deg);
+	margin-top: -6px;
+}
+@keyframes circl {
+	0%{
+		transform: scale(1.0);
+
+	}
+	100%{
+		transform: scale(1000);
+	}
+}
