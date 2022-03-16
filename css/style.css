@@ -1,3 +1,10 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+.main_wrap{
+	display: none;
+}
 .btn_menu{
 	border-color: transparent;
 	background-color: transparent;
