@@ -41,6 +41,13 @@ body{
 	display: none;
 	z-index: 3;
 }
+.main_menu ul{
+	list-style: none;
+}
+.main_menu ul a{
+	color: #fff;
+	text-decoration: none;
+}
 .main_menu:before{
 	content: "";
 	width: 10px;
