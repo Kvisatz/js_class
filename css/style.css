@@ -4,6 +4,7 @@ body{
 }
 .main_wrap{
 	display: none;
+	background-color: #000;
 }
 .btn_menu{
 	border-color: transparent;
@@ -15,7 +16,7 @@ body{
 	height: 31px;
 }
 .btn_menu span{
-	background-color: #000;
+	background-color: #fff;
 	height: 2px;
 	width: 20px;
 	margin: 4px 0;
@@ -38,8 +39,10 @@ body{
 	top: 0;
 	left: 0;
 	display: none;
+	z-index: 3;
 }
-.main_menu .circle{
+.main_menu:before{
+	content: "";
 	width: 10px;
 	height: 10px;
 	margin-top: -5px;
@@ -50,11 +53,12 @@ body{
 	border-radius: 50%;
 	transition: 5s ease;
 	transform: scale(1000);
+	z-index: -1;
 }
 .main_wrap.active .main_menu{
 	display: block;
 }
-.main_wrap.active .main_menu .circle{
+.main_wrap.active .main_menu:before{
 	background-color: #000;
 	animation: circl 5s ease;
 }
